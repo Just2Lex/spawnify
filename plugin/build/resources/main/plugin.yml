@@ -1,0 +1,42 @@
+
+name: Spawnify
+version: '1.0.0'
+main: com.spawnify.SpawnifyPlugin
+api-version: '1.21'
+author: Just2Lex
+description: Spawn system with multi-world support, GUI selection, cooldowns, countdowns, and events.
+
+softdepend:
+  - PlaceholderAPI
+
+commands:
+  spawn:
+    description: Teleport to a spawn point or open the spawn selector.
+    usage: /spawn [help|list|gui|menu|personal|<spawn>]
+    aliases: [sp]
+  spawnify:
+    description: Administrative commands for Spawnify.
+    usage: /spawnify <subcommand>
+
+permissions:
+  spawnify.use:
+    default: true
+  spawnify.personal.set:
+    default: true
+  spawnify.personal.clear:
+    default: true
+  spawnify.admin:
+    default: op
+    children:
+      spawnify.admin.reload: true
+      spawnify.admin.create: true
+      spawnify.admin.delete: true
+      spawnify.admin.world: true
+      spawnify.admin.firstjoin: true
+      spawnify.admin.death: true
+      spawnify.admin.personal: true
+      spawnify.admin.list: true
+  spawnify.bypass.cooldown:
+    default: op
+  spawnify.bypass.delay:
+    default: op

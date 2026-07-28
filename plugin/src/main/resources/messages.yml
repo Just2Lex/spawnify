@@ -1,0 +1,92 @@
+prefix: "&8[&aSpawnify&8] &7"
+
+no-permission: "&cYou do not have permission."
+player-only: "&cThis command can only be used by a player."
+player-not-found: "&cPlayer not found."
+spawn-not-found: "&cSpawn not found."
+spawn-available-none: "&eNo spawns are available."
+spawn-available-one: "&aOne spawn is available: &f%spawn%"
+spawn-available-multiple: "&aChoose a spawn in the GUI."
+spawn-unknown: "&cSpawn &f%spawn% &cwas not found."
+spawn-ambiguous: "&eSpawn &f%spawn% &eexists in multiple worlds. Use &f<world>:<id>&e."
+spawn-ambiguous-delete: "&eSpawn &f%spawn% &eexists in multiple worlds. Specify a world to delete it."
+spawn-set: "&aSpawn &f%spawn% &ahas been saved."
+spawn-removed: "&aSpawn &f%spawn% &ahas been deleted."
+world-spawn-set: "&aWorld spawn for &f%world% &ahas been saved."
+first-join-set: "&aFirst Join Spawn has been saved."
+death-spawn-set: "&aDeath Spawn has been saved."
+personal-set: "&aPersonal spawn for &f%player% &ain world &f%world% &ahas been saved."
+personal-cleared: "&ePersonal spawn for &f%player% &ein world &f%world% &ehas been removed."
+reloaded: "&aConfiguration and data have been reloaded."
+admin-help-title: "&aSpawnify admin commands:"
+spawn-help-title: "&aSpawn commands:"
+spawn-item-selected: "&eCurrent selection"
+
+admin-help-lines:
+  - "&7/spawnify reload &8- &freload configuration and data"
+  - "&7/spawnify list [world] &8- &fshow spawns"
+  - "&7/spawnify create <id> [permission] &8- &fcreate a spawn at your current position"
+  - "&7/spawnify delete <id> [world] &8- &fdelete a spawn"
+  - "&7/spawnify world [world] &8- &fset the world spawn"
+  - "&7/spawnify firstjoin &8- &fset the First Join Spawn"
+  - "&7/spawnify death &8- &fset the Death Spawn"
+  - "&7/spawnify personal set|clear <player> [world] &8- &fmanage personal spawns"
+
+spawn-help-lines:
+  - "&7/spawn &8- &fopen the GUI or teleport immediately"
+  - "&7/spawn list &8- &fopen the spawn selector GUI"
+  - "&7/spawn personal set &8- &fset a personal spawn"
+  - "&7/spawn personal clear &8- &fremove a personal spawn"
+  - "&7/spawn <world:id> &8- &fteleport to a specific spawn directly"
+
+teleport:
+  spawn:
+    message:
+      enabled: true
+      text: "&aTeleporting to spawn: &f%spawn%"
+  start:
+    enabled: true
+    text: "&aPlease wait: teleporting in &f%seconds% &asec."
+  cancelled:
+    enabled: true
+    text: "&cTeleportation cancelled."
+  complete:
+    enabled: true
+    text: "&aTeleportation complete."
+  cooldown-active:
+    enabled: true
+    text: "&cPlease wait &f%seconds% &csec."
+  countdown:
+    subtitle:
+      enabled: true
+      text: "&2%seconds%..."
+
+join:
+  first:
+    message:
+      enabled: true
+      text: "&aFirst join: teleporting to spawn."
+  repeat:
+    message:
+      enabled: true
+      text: "&aJoining: teleporting to the world spawn."
+
+death:
+  message:
+    enabled: true
+    text: "&aYour respawn point has been updated."
+
+void:
+  message:
+    enabled: true
+    text: "&cYou fell into the void. Teleporting to spawn."
+
+gui-title: "&8Spawn Selector"
+gui-next: "&aNext Page"
+gui-prev: "&cPrevious Page"
+gui-close: "&cClose"
+spawn-item-lore:
+  - "&7World: &f%world%"
+  - "&7Type: &f%type%"
+  - "&7Permission: &f%permission%"
+  - "&7Click to teleport."

@@ -1,0 +1,2 @@
+rootProject.name = 'Spawnify'
+include('api', 'core', 'plugin')

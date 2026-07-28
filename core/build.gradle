@@ -1,0 +1,13 @@
+plugins {
+    id 'java-library'
+}
+
+dependencies {
+    api project(':api')
+    compileOnly 'io.papermc.paper:paper-api:1.21.11-R0.1-SNAPSHOT'
+}
+
+tasks.named('jar') {
+    archiveFileName = 'SpawnifyCore.jar'
+    destinationDirectory = file("$rootDir/build/core")
+}

@@ -1,0 +1,17 @@
+plugins {
+    id 'java'
+}
+
+dependencies {
+    implementation project(':core')
+    compileOnly 'io.papermc.paper:paper-api:1.21.11-R0.1-SNAPSHOT'
+    compileOnly 'me.clip:placeholderapi:2.11.6'
+}
+
+tasks.named('jar') {
+    archiveFileName = 'Spawnify-1.0.0.jar'
+    destinationDirectory = file("$rootDir/build/plugin")
+    from(project(':core').sourceSets.main.output)
+    from(project(':api').sourceSets.main.output)
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}

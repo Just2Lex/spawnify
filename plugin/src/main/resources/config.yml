@@ -1,0 +1,225 @@
+settings:
+  gui:
+    rows: 6
+    title: "&8Spawnify - Spawns &7(%page%/%pages%)"
+    filler-enabled: true
+    filler-material: "GRAY_STAINED_GLASS_PANE"
+  personal:
+    enabled: true
+  selection:
+    open-gui-when-multiple: true
+    direct-teleport-when-single: true
+    multiple-behavior: "GUI"
+    single-behavior: "DIRECT"
+    allow-identifier-argument: true
+    default-world-spawn-fallback: true
+  teleport:
+    delay-seconds: 5
+    cooldown-seconds: 30
+    use-blindness: true
+    preserve-saved-orientation: true
+    force-saved-orientation: true
+    cancel-on-move: false
+    presentation:
+      message:
+        enabled: true
+        key: "teleport.spawn.message"
+        text: "&aTeleporting to spawn: &f%spawn%"
+      completion:
+        enabled: true
+        key: "teleport.complete"
+        text: "&aTeleportation complete."
+      title:
+        enabled: true
+        text: "&aTeleporting"
+        subtitle: "&7Teleportation complete."
+        fade-in: 10
+        stay: 20
+        fade-out: 10
+      effects:
+        sound:
+          enabled: true
+          name: "ENTITY_ENDERMAN_TELEPORT"
+          volume: 1.0
+          pitch: 1.0
+        particles:
+          enabled: false
+          name: "PORTAL"
+          count: 20
+          speed: 0.15
+          offset: 0.35
+      blindness:
+        enabled: false
+    countdown:
+      title:
+        enabled: true
+        text: "&aPlease wait"
+        fade-in: 10
+        stay: 20
+        fade-out: 10
+      subtitle:
+        enabled: true
+        message-key: "teleport.countdown.subtitle"
+        text: "&7%seconds%..."
+  connection:
+    title:
+      enabled: false
+      first-join-enabled: true
+      repeat-join-enabled: true
+      text: "&aSpawnify"
+      subtitle: "&7Welcome"
+      fade-in: 10
+      stay: 40
+      fade-out: 10
+  join:
+    first-join:
+      enabled: true
+      spawn-id: "first-join"
+      target-mode: "BEST_AVAILABLE"
+      teleport-delay-seconds: 0
+      apply-cooldown: false
+      cooldown-seconds: 0
+      fallback-to-world-spawn: true
+      presentation:
+        message:
+          enabled: true
+          key: "join.first.message"
+          text: "&aFirst join: teleporting to spawn."
+        completion:
+          enabled: true
+          key: "teleport.complete"
+          text: "&aTeleportation complete."
+        title:
+          enabled: true
+          text: "&aFirst Join"
+          subtitle: "&7Welcome to the server"
+          fade-in: 10
+          stay: 40
+          fade-out: 10
+        effects:
+          sound:
+            enabled: false
+            name: "ENTITY_ENDERMAN_TELEPORT"
+            volume: 1.0
+            pitch: 1.0
+          particles:
+            enabled: false
+            name: "PORTAL"
+            count: 20
+            speed: 0.15
+            offset: 0.35
+        blindness:
+          enabled: false
+    repeat-join:
+      enabled: false
+      teleport-to-world-spawn: false
+      target-mode: "BEST_AVAILABLE"
+      spawn-id: ""
+      teleport-delay-seconds: 0
+      apply-cooldown: false
+      cooldown-seconds: 0
+      fallback-to-world-spawn: true
+      presentation:
+        message:
+          enabled: true
+          key: "join.repeat.message"
+          text: "&aJoining: teleporting to the world spawn."
+        completion:
+          enabled: true
+          key: "teleport.complete"
+          text: "&aTeleportation complete."
+        title:
+          enabled: true
+          text: "&aWelcome back"
+          subtitle: "&7Welcome back to the server"
+          fade-in: 10
+          stay: 40
+          fade-out: 10
+        effects:
+          sound:
+            enabled: false
+            name: "ENTITY_ENDERMAN_TELEPORT"
+            volume: 1.0
+            pitch: 1.0
+          particles:
+            enabled: false
+            name: "PORTAL"
+            count: 20
+            speed: 0.15
+            offset: 0.35
+        blindness:
+          enabled: false
+  death:
+    enabled: true
+    respawn-delay-seconds: 0
+    teleport-delay-seconds: 0
+    spawn-id: "death"
+    apply-cooldown: false
+    cooldown-seconds: 0
+    fallback-to-world-spawn: true
+    presentation:
+      message:
+        enabled: true
+        key: "death.message"
+        text: "&aYour respawn point has been updated."
+      completion:
+        enabled: true
+        key: "teleport.complete"
+        text: "&aTeleportation complete."
+      title:
+        enabled: false
+        text: "&cDeath"
+        subtitle: "&7Respawn point updated"
+        fade-in: 10
+        stay: 40
+        fade-out: 10
+      effects:
+        sound:
+          enabled: false
+          name: "ENTITY_WITHER_SPAWN"
+          volume: 1.0
+          pitch: 1.0
+        particles:
+          enabled: false
+          name: "SMOKE"
+          count: 20
+          speed: 0.15
+          offset: 0.35
+      blindness:
+        enabled: false
+  void:
+    enabled: true
+    y-threshold: -64.0
+    teleport-delay-seconds: 0
+    teleport-cooldown-seconds: 5
+    apply-cooldown: false
+    presentation:
+      message:
+        enabled: true
+        key: "void.message"
+        text: "&cYou fell into the void. Teleporting to spawn."
+      completion:
+        enabled: true
+        key: "teleport.complete"
+        text: "&aTeleportation complete."
+      title:
+        enabled: false
+        text: "&cVoid"
+        subtitle: "&7Teleporting to spawn"
+        fade-in: 10
+        stay: 40
+        fade-out: 10
+      effects:
+        sound:
+          enabled: false
+          name: "ENTITY_ENDERMAN_TELEPORT"
+          volume: 1.0
+          pitch: 1.0
+        particles:
+          enabled: false
+          name: "PORTAL"
+          count: 20
+          speed: 0.15
+          offset: 0.35
+      blindness:
+        enabled: false
